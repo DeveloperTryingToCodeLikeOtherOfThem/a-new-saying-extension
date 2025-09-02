@@ -20,7 +20,7 @@ namespace blinkTextSayRenderer {
   
       /**
        * renders the text and make sure the next letter value 1 so it can blink a period time to next time letter word.
-        also set the timing how long it blinks on the 3rd parameter if it is 100 pauses for 100 and stays printed for the ammound of time.
+        also set the timing how long it blinks on the 3rd parameter if it is 100 pauses for 100 and stays printed for the ammount of time.
        */
       render (text: string, nextLetter: number, millisForPause: number) {
         scene.createRenderable(-1, (image: Image, camera: scene.Camera) => {
