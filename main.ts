@@ -28,14 +28,14 @@ namespace blinkTextSayRenderer {
              */
             
             game.currentScene().eventContext.registerFrameHandler(1000, () => {
-               setInterval(() => {
+               pause(100)
                    if (text.length > nextLetter) {
                        image.print(text, this.width, this.height)
                        sprites.create(image)
                    } else {
                        // wait until the next letter is printed
                    }
-               }, 1000)
+              
             })
         })
       }
