@@ -17,6 +17,10 @@ namespace blinkTextSayRenderer {
           this.image = img
       }
 
+  
+      /**
+       * renders the text and make sure the next letter value 1 so it can blink a period time to next time letter word.
+       */
       render (text: string, nextLetter: number) {
         scene.createRenderable(-1, (image: Image, camera: scene.Camera) => {
             this.image = image 
