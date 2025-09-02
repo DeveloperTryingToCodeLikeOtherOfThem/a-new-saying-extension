@@ -20,8 +20,9 @@ namespace blinkTextSayRenderer {
   
       /**
        * renders the text and make sure the next letter value 1 so it can blink a period time to next time letter word.
+        also set the timing how long it blinks on the 3rd parameter if it is 100 pauses for 100 and stays printed for the ammound of time.
        */
-      render (text: string, nextLetter: number) {
+      render (text: string, nextLetter: number, millisForPause: number) {
         scene.createRenderable(-1, (image: Image, camera: scene.Camera) => {
             this.image = image 
     
@@ -32,7 +33,7 @@ namespace blinkTextSayRenderer {
              */
             
             game.currentScene().eventContext.registerFrameHandler(1000, () => {
-               pause(100)
+               pause(millisForPause)
                    if (text.length > nextLetter) {
                        image.print(text, this.width, this.height)
                        sprites.create(image)

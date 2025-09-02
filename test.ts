@@ -16,4 +16,4 @@ const textBlinkSprite = new blinkTextSayRenderer.RenderText(img`
     . e e b b 4 4 4 4 4 4 4 4 e e .
     . . . c c c c c e e e e e . . .
 `)
-textBlinkSprite.render("hi", 1) 
+textBlinkSprite.render("hi", 1, 1000) 
